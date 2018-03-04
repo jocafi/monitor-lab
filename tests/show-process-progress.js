@@ -9,12 +9,17 @@ const appTitle = "\n _      ____  _      _  _____  ____  ____    _     ____  ___
 
 console.log(appTitle);
 
-// PUT YOUR CODE HERE.
-// Give your best :-D
+var interval = setInterval(showProgress, 2000);
+var counter = 0;
+
+function showProgress() {
+  process.stdout.write("TEST " + counter++ + "%\r");
+}
 
 console.log("\n\n\nWaiting until exit...\n\nPress CTRL+C twice or more to exit.");
 
 rl.on('close', () => {
   console.log('Have a great day!');
+  clearInterval(interval);
   process.exit(0);
 });
