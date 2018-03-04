@@ -1,0 +1,19 @@
+{
+  "name": "monitor-lab",
+  "version": "1.0.0",
+  "description": "This app monitors the changes of a single JavaScript (JS) file and reruns / restart the file again after changes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor -n exit index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monitor", "JS", "javascript", "rerun", "restart", "reload"
+  ],
+  "author": "Joao Araujo (jocca)",
+  "license": "MIT",
+  "devDependencies": {
+    "readline": "^1.3.0",
+    "supervisor": "^0.12.0"
+  }
+}
